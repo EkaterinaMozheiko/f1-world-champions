@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 24px;
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.centeredWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  text-transform: uppercase;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: 600;
+}

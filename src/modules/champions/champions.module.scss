@@ -1,0 +1,47 @@
+@import '../../vars.css';
+
+.wrapper {
+  width: 100%;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.centeredWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item {
+  margin: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  color: var(--color-black);
+  padding: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  align-self: stretch;
+
+  &.active {
+    background-color: var(--color-main-blue);
+    color: var(--color-white);
+  }
+
+  &:hover:not(.active) {
+    background-color: var(--color-main-blue);
+    color: var(--color-white);
+  }
+}
+
+.content {
+  flex: 1 0 auto;
+  overflow: auto;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: 600;
+}
