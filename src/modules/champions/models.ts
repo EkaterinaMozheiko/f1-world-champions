@@ -1,5 +1,5 @@
-export interface Driver {
-  season: string;
+export interface Champion {
+  season: number;
   driverId: string;
   givenName: string;
   familyName: string;

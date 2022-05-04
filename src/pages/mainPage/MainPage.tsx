@@ -14,9 +14,9 @@ export const MainPage: FC = memo(() => {
   const season = useSeason();
 
   /*
-    Action is called here because it is more appropriate to place that kind of logic at the higher components. 
-    It helps keep data flow clearer. 
-  */
+   *  Action is called here because it is more appropriate to place that kind of logic at the higher components.
+   *  It helps keep data flow clearer.
+   */
   useEffect(() => {
     if (season) {
       dispatch(getRaces(season));

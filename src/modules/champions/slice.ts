@@ -1,11 +1,11 @@
 import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { LoadingState } from '../../models';
 
+import { LoadingState } from '../../models';
 import type { RootState } from '../../store';
-import { Driver } from './models';
+import { Champion } from './models';
 
 export interface ChampionsState {
-  list: readonly Driver[];
+  list: readonly Champion[];
   loadingState: LoadingState;
 }
 
@@ -21,7 +21,7 @@ const championsSlice = createSlice({
     getChampions(state) {
       state.loadingState = 'loading';
     },
-    getChampionsSuccess(state, action: PayloadAction<Driver[]>) {
+    getChampionsSuccess(state, action: PayloadAction<Champion[]>) {
       state.loadingState = 'success';
       state.list = action.payload;
     },
@@ -39,8 +39,8 @@ export const selectChampions = createSelector(
 );
 
 export const createChampionOfTheSeasonSelector = (
-  season: string | null,
-): ((state: RootState) => Driver | undefined) =>
+  season: number | null,
+): ((state: RootState) => Champion | undefined) =>
   createSelector(selectSelf, (state) =>
     state.list.find((item) => item.season === season),
   );

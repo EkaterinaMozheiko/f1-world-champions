@@ -67,7 +67,7 @@ interface Result {
   FastestLap: FastestLap;
 }
 
-interface Race {
+export interface Race {
   season: string;
   round: string;
   url: string;
@@ -98,8 +98,16 @@ export interface RacesResponse {
   MRData: MRData;
 }
 
-export async function getRaces(year: string) {
+export async function getRaces({
+  season,
+  offset,
+  limit,
+}: {
+  season: number;
+  offset: number;
+  limit: number;
+}) {
   return axios.get<RacesResponse>(
-    `https://ergast.com/api/f1/${year}/results/1.json`,
+    `https://ergast.com/api/f1/${season}/results/1.json?limit=${limit}&offset=${offset}`,
   );
 }

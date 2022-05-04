@@ -18,7 +18,7 @@ const racesSlice = createSlice({
   name: 'races',
   initialState,
   reducers: {
-    getRaces(state, action: PayloadAction<string>) {
+    getRaces(state, action: PayloadAction<number>) {
       state.loadingState = 'loading';
     },
     getRacesSuccess(state, action: PayloadAction<Race[]>) {

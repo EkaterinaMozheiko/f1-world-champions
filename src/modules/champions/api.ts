@@ -27,7 +27,7 @@ interface DriverStanding {
   Constructors: Constructor[];
 }
 
-interface StandingsList {
+export interface StandingsList {
   season: string;
   round: string;
   DriverStandings: DriverStanding[];
@@ -52,8 +52,14 @@ export interface ChampionsResponse {
   MRData: MRData;
 }
 
-export async function getChampions() {
+export async function getChampions({
+  offset,
+  limit,
+}: {
+  offset: number;
+  limit: number;
+}) {
   return axios.get<ChampionsResponse>(
-    'https://ergast.com/api/f1/driverStandings/1.json?limit=100', // limit 100 is set due to the api limitation
+    `https://ergast.com/api/f1/driverStandings/1.json?limit=${limit}&offset=${offset}`,
   );
 }

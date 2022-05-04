@@ -43,7 +43,7 @@ export const Champions: FC = memo(() => {
       })}`;
 
       return (
-        <Item key={key} to={driverSeason} isActive={isActive}>
+        <Item key={key} to={String(driverSeason)} isActive={isActive}>
           {content}
         </Item>
       );

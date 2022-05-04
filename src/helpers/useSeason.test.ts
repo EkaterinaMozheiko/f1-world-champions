@@ -25,25 +25,25 @@ describe('useSeason', () => {
 
   test('returns season from url', () => {
     useParamsMock.mockReturnValue({ season: '2007' });
-    useSelectorMock.mockReturnValue('2005');
+    useSelectorMock.mockReturnValue(2005);
 
     const { result } = renderHook(() => useSeason());
 
-    expect(result.current).toBe('2007');
+    expect(result.current).toBe(2007);
   });
 
-  test('returns last season from list of the Champions', () => {
+  test('returns last season from the Champions list', () => {
     useParamsMock.mockReturnValue({ season: undefined });
-    useSelectorMock.mockReturnValue('2005');
+    useSelectorMock.mockReturnValue(2005);
 
     const { result } = renderHook(() => useSeason());
 
-    expect(result.current).toBe('2005');
+    expect(result.current).toBe(2005);
   });
 
   test('returns null', () => {
     useParamsMock.mockReturnValue({ season: undefined });
-    useSelectorMock.mockReturnValue(undefined);
+    useSelectorMock.mockReturnValue(null);
 
     const { result } = renderHook(() => useSeason());
 
