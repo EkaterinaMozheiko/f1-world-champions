@@ -28,7 +28,7 @@ function* fetchRaces(action: PayloadAction<number>) {
     let offset = 0;
     let total = Infinity;
 
-    let aggregatedData: api.Race[] = [];
+    const aggregatedData: api.Race[] = [];
 
     while (offset < total) {
       const { data }: AxiosResponse<api.RacesResponse> = yield call(

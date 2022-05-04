@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { render, screen, within } from '@testing-library/react';
 
 import { Table } from './Table';

@@ -106,7 +106,7 @@ export async function getRaces({
   season: number;
   offset: number;
   limit: number;
-}) {
+}): Promise<AxiosResponse<RacesResponse>> {
   return axios.get<RacesResponse>(
     `https://ergast.com/api/f1/${season}/results/1.json?limit=${limit}&offset=${offset}`,
   );

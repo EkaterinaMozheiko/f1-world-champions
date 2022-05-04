@@ -18,6 +18,7 @@ const racesSlice = createSlice({
   name: 'races',
   initialState,
   reducers: {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     getRaces(state, action: PayloadAction<number>) {
       state.loadingState = 'loading';
     },
