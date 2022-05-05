@@ -1,6 +1,8 @@
+@import '../../vars.scss';
+
 .wrapper {
   padding: 24px;
-  min-width: 800px;
+  min-width: var(--table-min-width);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +19,8 @@
 
 .header {
   text-transform: uppercase;
+  font-size: var(--font-size-page-header);
+  align-self: flex-start;
 }
 
 .message {

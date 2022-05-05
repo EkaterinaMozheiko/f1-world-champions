@@ -1,9 +1,10 @@
-@import '../../vars.css';
+@import '../../vars.scss';
 
 .wrapper {
   width: 100%;
   overflow-y: auto;
   padding: 12px 0;
+  font-size: var(--font-size-main);
 }
 
 .centeredWrapper {

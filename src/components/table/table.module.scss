@@ -1,12 +1,12 @@
-@import '../../vars.css';
+@import '../../vars.scss';
 
 .table {
   border-collapse: collapse;
   width: 100%;
+  font-size: var(--font-size-main);
 
   th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0;
     text-align: left;
     background-color: var(--color-white);
     position: sticky;
@@ -17,7 +17,7 @@
 
   td,
   th {
-    padding: 16px;
+    padding: var(--table-padding);
     height: 32px;
   }
 

@@ -1,0 +1,51 @@
+$mobile-width: 600px;
+$tablet-width: 900px;
+
+:root {
+  --color-white: #ffffff;
+
+  --color-black: #000000;
+
+  --color-main-blue: #0bc5ea;
+
+  --color-main-gray: #cbd5e0;
+  --color-light-gray: #e2e8f0;
+  --color-dark-gray: #4a5568;
+
+  --font-size-main: 16px;
+  --font-size-header: 12px;
+  --font-size-page-header: 20px;
+
+  --table-padding: 16px;
+  --table-min-width: 420px;
+
+  --sidebar-width: 300px;
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  :root {
+    --font-size-main: 14px;
+    --font-size-header: 10px;
+    --font-size-page-header: 18px;
+
+    --table-padding: 12px;
+
+    --sidebar-width: 250px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  :root {
+    --font-size-main: 12px;
+    --font-size-header: 8px;
+    --font-size-page-header: 12px;
+
+    --table-padding: 8px;
+
+    --sidebar-width: 200px;
+  }
+}
+
+:export {
+  tabletWidth: $tablet-width;
+}
