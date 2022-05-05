@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
+import { BASE_API_PATH } from '../../config/api';
+
 interface Location {
   lat: string;
   long: string;
@@ -108,6 +110,6 @@ export async function getRaces({
   limit: number;
 }): Promise<AxiosResponse<RacesResponse>> {
   return axios.get<RacesResponse>(
-    `https://ergast.com/api/f1/${season}/results/1.json?limit=${limit}&offset=${offset}`,
+    `${BASE_API_PATH}/f1/${season}/results/1.json?limit=${limit}&offset=${offset}`,
   );
 }

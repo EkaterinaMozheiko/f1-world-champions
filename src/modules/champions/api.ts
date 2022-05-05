@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { BASE_API_PATH } from '../../config/api';
+
 interface Driver {
   driverId: string;
   url: string;
@@ -60,6 +62,6 @@ export async function getChampions({
   limit: number;
 }) {
   return axios.get<ChampionsResponse>(
-    `https://ergast.com/api/f1/driverStandings/1.json?limit=${limit}&offset=${offset}`,
+    `${BASE_API_PATH}/f1/driverStandings/1.json?limit=${limit}&offset=${offset}`,
   );
 }
