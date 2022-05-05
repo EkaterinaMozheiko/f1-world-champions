@@ -56,7 +56,7 @@ I have 3 breakpoints:
 
 - 600px for mobile devices
 - 900px for tablets
-- > 900px desktop
+- &gt; 900px desktop
 
 On the desktop sidebar is always visible.
 
