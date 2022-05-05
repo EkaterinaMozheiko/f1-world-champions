@@ -30,7 +30,7 @@ npm run start
 
 For bigger projects, I would create a models directory to keep models which are used among the whole app. But in this case I have only one type (for loading state) so I decided to create the only one file in `/src`.
 
-`vars.css` file keeps all used colors in one place. This approach helps to manipulate CSS properties in the application easier.
+`vars.scss` file keeps all used colors in one place. This approach helps to manipulate CSS properties in the application easier.
 
 Creating this structure, I tried to stick to `Separation of concerns` principle.
 
@@ -49,3 +49,18 @@ The app was checked in the following browsers:
 3. Edge
 
 Unfortunately, I don't have an opportunity to test it in Safari (laptop OS is Linux)
+
+## Adaptivity
+
+I have 3 breakpoints:
+
+- 600px for mobile devices
+- 900px for tablets
+- > 900px desktop
+
+On the desktop sidebar is always visible.
+
+For tablets and mobile devices, I made font-sizes and table paddings smaller.
+
+When the user makes the screen narrower to these breakpoints, a menu button appears and the sidebar hides. We can open/close sidebar using this button.
+When the user clicks on an item in the sidebar, it automatically closes to display data on a full screen.
